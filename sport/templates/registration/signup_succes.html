@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<section class=" login-block  border-bottom border-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mx-auto">       
+            <section class="">
+    			<div class="container">
+  					<div class="row">
+    					<div class="col-md-12 login-sec text-center "  style="padding: 50px 30px!important;">
+        					<h2>Votre inscription a été pris en compte, connectez-vous maintenant</h2>
+			            <a href="{% url 'login' %}" class="btn btn-success mr-3">Se connecter</a>
+							   <br>	
+										
+    					</div>
+					</div>
+				</div>
+			</section>
+      </div> <!-- END col-12 -->    
+    </div> <!-- END row-->
+  </div> <!-- END container-->
+</section> <!-- END section-->
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<section class=" login-block  border-bottom border-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">   
+         <section class="">
+
+    			<div class="container">
+  					<div class="row">
+    					<div class="col-md-4 login-sec text-center "  style="padding: 5px 30px!important;">
+        			
+        					<h2>S'inscrire</h2>
+							<form method="post">
+								{% csrf_token %}
+								{{ form|crispy }}
+								<button type="submit" class="btn btn-primary mr-2  ">S'inscrire</button>
+								<a class="btn mr-3  " href="{% url 'login' %}">Se connecter</a>
+							</form>
+										
+    					</div>
+    					<div class="col-md-8 banner-sec">
+            				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                 				
+            					<div class="carousel-inner" role="listbox">
+    								<div class="carousel-item active" >
+      									<img class="d-block img-fluid" style="height: 80vh!important" img-fluid" src="https://scontent.fabj3-1.fna.fbcdn.net/v/t1.0-9/67404257_2241632265959177_4088395823082110976_o.jpg?_nc_cat=106&_nc_oc=AQmmEeFSDGqXY_c2rRhKJVA3w9SNut4dxFs-p5VW7Z3XlemdV9dcPM0APCBqEqBdQ44&_nc_ht=scontent.fabj3-1.fna&oh=05a895d294fc94cd35de626f7867da02&oe=5DDEAA86" alt="First slide">
+      									<div class="carousel-caption d-none d-md-block">
+        									<div class="banner-text">
+            									<h2>Bienvenu</h2>
+            									<p>Inscrivez-vous en un clique et commencez à parier</p>
+        									</div>  
+  										</div>
+   									</div>
+	    							
+            					</div>     
+    						</div>
+  						</div>
+					</div>
+				</div>
+			</section>
+      </div> <!-- END col-12 -->    
+    </div> <!-- END row-->
+  </div> <!-- END container-->
+</section> <!-- END section-->
+
+	
+
+{% endblock %}

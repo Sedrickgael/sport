@@ -1,0 +1,221 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'paris' %}">Paris</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'football' %}">Football</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'basketball' %}">Basketball</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'rugby' %}">Rugby</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'tenis' %}">Tenis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'autres' %}">Autres</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ user.username }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'compte' %}">Compte</a>
+          <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+          <a class="dropdown-item" href="{% url 'password_change' %}">Changer mot de passe</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{% url 'logout' %}">Déconnection</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<section class=" login-block  border-bottom border-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 mx-auto">       
+        <section class="">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 login-sec text-center "  style="padding: 50px 30px!important;">
+                  <!--Accordion wrapper-->
+                <div class="accordion md-accordion accordion-blocks" id="accordionEx78" role="tablist"
+                  aria-multiselectable="true">
+
+                  <!-- Accordion card -->
+                  <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingUnfiled">
+                      <!-- Heading -->
+                      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapseUnfiled" aria-expanded="true"
+                        aria-controls="collapseUnfiled">
+                        <h5 class="mt-1 mb-0">
+                          <span>Première league</span>
+                        </h5>
+                      </a>
+
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseUnfiled" class="collapse" role="tabpanel" aria-labelledby="headingUnfiled"
+                      data-parent="#accordionEx78">
+                      <div class="card-body">
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="heading79">
+                      <!-- Heading -->
+                      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapse79" aria-expanded="true"
+                        aria-controls="collapse79">
+                        <h5 class="mt-1 mb-0">
+                          <span>Ligue</span>
+                        </h5>
+                      </a>
+
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse79" class="collapse show" role="tabpanel" aria-labelledby="heading79"
+                      data-parent="#accordionEx78">
+                      <div class="card-body">
+
+                               <!-- Table responsive wrapper -->
+                        
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="heading80">
+                      
+                      <!-- Heading -->
+                      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapse80" aria-expanded="true"
+                        aria-controls="collapse80">
+                        <h5 class="mt-1 mb-0">
+                          <span>Serie A</span>
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse80" class="collapse" role="tabpanel" aria-labelledby="heading80"
+                      data-parent="#accordionEx78">
+                      <div class="card-body">
+
+                        
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="heading">
+
+                      <!-- Heading -->
+                      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapse81" aria-expanded="true"
+                        aria-controls="collapse81">
+                        <h5 class="mt-1 mb-0">
+                          <span>Liga</span>
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse81" class="collapse" role="tabpanel" aria-labelledby="heading"
+                      data-parent="#accordionEx78">
+                      <div class="card-body">
+
+                       
+
+
+                      </div>
+                    </div>
+                  </div>
+                   <div class="card">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="heading">
+
+                      <!-- Heading -->
+                      <a data-toggle="collapse" data-parent="#accordionEx78" href="#collapse82" aria-expanded="true"
+                        aria-controls="collapse81">
+                        <h5 class="mt-1 mb-0">
+                          <span>Bundnestliga</span>
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse81" class="collapse" role="tabpanel" aria-labelledby="heading"
+                      data-parent="#accordionEx78">
+                      <div class="card-body">
+
+                       
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+                </div>
+                <!--/.Accordion wrapper-->
+              </div>
+              <div class="col-md-4 login-sec text-center "  style="padding: 50px 30px!important;">
+                  <h2 class="text-center" >Votre mise</h2> 
+              <form method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary mr-3  btn-block">Valider</button><br>
+
+              </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div> <!-- END col-12 -->    
+    </div> <!-- END row-->
+  </div> <!-- END container-->
+</section> <!-- END section-->
+
+
+
+
+{% endblock %}
